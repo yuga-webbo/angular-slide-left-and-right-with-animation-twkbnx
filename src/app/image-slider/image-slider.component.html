@@ -1,0 +1,7 @@
+<button type="button" (click)="onPrevious()" [disabled]="counter===0">Previous</button>
+<button type="button" (click)="onNext()" [disabled]="this.counter == this.images.length - 1">Next</button>
+<div [@animImageSlider]="counter">
+	<ng-container *ngFor="let img of images; let i=index">
+   <img [src]="img" style="height:200px; width:200px" *ngIf="i===counter"/>
+	</ng-container>
+</div>

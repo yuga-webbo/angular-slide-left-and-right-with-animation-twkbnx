@@ -1,0 +1,13 @@
+<button type="button" (click)="onPrevious()" [disabled]="counter===0">Previous</button>
+<button type="button" (click)="onNext()" [disabled]="this.counter == this.list.length - 1">Next</button>
+<div [@animSlider]="counter">
+	<ng-container *ngFor="let o of list; let i=index">
+		<hello *ngIf="i===counter" name="{{i}}">
+			{{i}}
+		</hello>
+	</ng-container>
+</div>
+<br/>
+<br/>
+<br/>
+<app-image-slider></app-image-slider>
